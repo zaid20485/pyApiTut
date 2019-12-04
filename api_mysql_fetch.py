@@ -3,15 +3,15 @@ from flask import Flask
 import mysql.connector 
 
 mydb = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  passwd="toorpoor",
-  database="homework1"
+  host="10.20.10.230",
+  user="test",
+  passwd="test",
+  database="testDB"
 )
 
 mycursor = mydb.cursor()
 
-mycursor.execute("SELECT * FROM customers")
+mycursor.execute("SELECT * FROM users")
 
 myresult = mycursor.fetchall()
 
